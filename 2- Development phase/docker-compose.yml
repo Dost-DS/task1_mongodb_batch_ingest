@@ -1,0 +1,46 @@
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: iot-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: iot
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+      - ./init:/docker-entrypoint-initdb.d:ro
+
+  mongo-express:
+    image: mongo-express
+    container_name: iot-mongo-express
+    restart: unless-stopped
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/?authSource=admin
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+
+  app:
+    build: ./app
+    container_name: iot-batch-loader
+    restart: "no"
+    environment:
+      MONGODB_URI: mongodb://root:example@mongo:27017/?authSource=admin
+      MONGODB_DB: iot
+      MONGODB_COLLECTION: measurements
+    volumes:
+      - ./data:/app/data:rw
+    command: ["python", "-u", "ingest.py", "--file", "/app/data/cleaned_IoT_data.csv", "--chunk-size", "50000"]
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
+ 
