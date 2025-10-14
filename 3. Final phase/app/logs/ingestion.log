@@ -1,0 +1,46 @@
+2025-10-08 20:14:47,780 [INFO] Starting IoT batch ingestion process...
+2025-10-08 20:14:47,780 [INFO] Connecting to MongoDB at mongodb://root:example@mongo:27017/?authSource=admin
+2025-10-08 20:14:57,231 [INFO] {"message": "Waiting for suitable server to become available", "selector": "<function writable_server_selector at 0x7f7aefff6020>", "operation": "insert", "operationId": 2035957700, "topologyDescription": "<TopologyDescription id: 68e6c6376c1bf71b99709119, topology_type: Unknown, servers: [<ServerDescription ('mongo', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongo:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>", "clientId": {"$oid": "68e6c6376c1bf71b99709119"}, "remainingTimeMS": 29}
+2025-10-08 20:14:57,901 [INFO] [Chunk 1] Inserted 40518/40518 docs.
+2025-10-08 20:14:57,905 [INFO] ============================================================
+2025-10-08 20:14:57,905 [INFO] TOTAL rows seen:      40518
+2025-10-08 20:14:57,905 [INFO] TOTAL inserted:       40518
+2025-10-08 20:14:57,906 [INFO] TOTAL duplicates:     0
+2025-10-08 20:14:57,906 [INFO] TOTAL duration (sec): 10.11
+2025-10-08 20:14:57,906 [INFO] Metrics saved to logs/metrics.json
+2025-10-08 20:14:57,906 [INFO] ============================================================
+2025-10-08 20:14:57,916 [INFO] Ingestion process completed successfully.
+2025-10-08 20:33:00,310 [INFO] Starting IoT batch ingestion process...
+2025-10-08 20:33:00,310 [INFO] Connecting to MongoDB at mongodb://root:example@mongo:27017/?authSource=admin
+2025-10-08 20:33:11,840 [WARNING] [Chunk 1] Inserted 0/40518 docs; 40518 duplicates skipped.
+2025-10-08 20:33:11,844 [INFO] ============================================================
+2025-10-08 20:33:11,845 [INFO] TOTAL rows seen:      40518
+2025-10-08 20:33:11,845 [INFO] TOTAL inserted:       0
+2025-10-08 20:33:11,845 [INFO] TOTAL duplicates:     40518
+2025-10-08 20:33:11,845 [INFO] TOTAL duration (sec): 11.52
+2025-10-08 20:33:11,846 [INFO] Metrics saved to logs/metrics.json
+2025-10-08 20:33:11,846 [INFO] ============================================================
+2025-10-08 20:33:11,870 [INFO] Ingestion process completed successfully.
+2025-10-11 11:14:40,419 [INFO] Starting IoT batch ingestion process...
+2025-10-11 11:14:40,420 [INFO] Connecting to MongoDB at mongodb://root:example@mongo:27017/?authSource=admin
+2025-10-11 11:14:50,309 [INFO] {"message": "Waiting for suitable server to become available", "selector": "<function writable_server_selector at 0x7f1346451e40>", "operation": "insert", "operationId": 1346614262, "topologyDescription": "<TopologyDescription id: 68ea3c20e0629e6b21035467, topology_type: Unknown, servers: [<ServerDescription ('mongo', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongo:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>", "clientId": {"$oid": "68ea3c20e0629e6b21035467"}, "remainingTimeMS": 29}
+2025-10-11 11:14:51,185 [INFO] [Chunk 1] Inserted 40518/40518 docs.
+2025-10-11 11:14:51,188 [INFO] ============================================================
+2025-10-11 11:14:51,189 [INFO] TOTAL rows seen:      40518
+2025-10-11 11:14:51,189 [INFO] TOTAL inserted:       40518
+2025-10-11 11:14:51,189 [INFO] TOTAL duplicates:     0
+2025-10-11 11:14:51,190 [INFO] TOTAL duration (sec): 10.76
+2025-10-11 11:14:51,190 [INFO] Metrics saved to logs/metrics.json
+2025-10-11 11:14:51,190 [INFO] ============================================================
+2025-10-11 11:14:51,203 [INFO] Ingestion process completed successfully.
+2025-10-13 19:51:33,748 [INFO] Starting IoT batch ingestion process...
+2025-10-13 19:51:33,748 [INFO] Connecting to MongoDB at mongodb://root:example@mongo:27017/?authSource=admin
+2025-10-13 19:51:44,576 [WARNING] [Chunk 1] Inserted 0/40518 docs; 40518 duplicates skipped.
+2025-10-13 19:51:44,581 [INFO] ============================================================
+2025-10-13 19:51:44,581 [INFO] TOTAL rows seen:      40518
+2025-10-13 19:51:44,582 [INFO] TOTAL inserted:       0
+2025-10-13 19:51:44,582 [INFO] TOTAL duplicates:     40518
+2025-10-13 19:51:44,583 [INFO] TOTAL duration (sec): 10.83
+2025-10-13 19:51:44,583 [INFO] Metrics saved to logs/metrics.json
+2025-10-13 19:51:44,584 [INFO] ============================================================
+2025-10-13 19:51:44,608 [INFO] Ingestion process completed successfully.
